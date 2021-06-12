@@ -1,1 +1,18 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 /* You can add global styles to this file, and also import other style files */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+footer {
+    margin-top: auto;
+}
+html {
+    height: 100%;
+}
+.banner {
+    @apply bg-blue-500 p-10 text-center text-lg
+}
