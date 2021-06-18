@@ -13,6 +13,6 @@ footer {
 html {
     height: 100%;
 }
-.banner {
-    @apply bg-blue-500 p-10 text-center text-lg
-}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
