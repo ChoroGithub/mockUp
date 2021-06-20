@@ -25,6 +25,12 @@ h2, p, span {
     font-weight: 600 !important;
     text-transform: uppercase !important;
 }
+
+/* Styles for the ink bar */
+.mat-ink-bar.mat-ink-bar {
+    background-color: #e5e7eb !important;
+}
+
 #greating {
     display: flex;
     justify-content: center;
@@ -52,4 +58,13 @@ h2, p, span {
     list-style-type: none;
     margin-top: 4px;
   }
-  
+
+  .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    opacity: 0 !important; /*click effect color change*/
+    background-color: black !important;  }
+    
+    .mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: black !important; /*inner circle color change*/  }
+    
+    .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: black !important; /*outer ring color change*/  }
