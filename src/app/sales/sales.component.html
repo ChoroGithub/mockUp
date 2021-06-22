@@ -1,0 +1,88 @@
+<p id="greating">Verkaufszahlen</p>
+
+<div class="grid-2-columns">
+    <mat-checkbox class="example-margin" [(ngModel)]="checked" style="margin: 0 auto;">Mir Kampagne</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="indeterminate" style="margin: 0 auto;">Ohne Kampagne</mat-checkbox>
+</div>
+<div style="display: flex; align-items: center; justify-content: center;">
+    <mat-form-field appearance="fill" style="width: 250px;">
+        <mat-select [(value)]="selectedT">
+            <mat-option>None</mat-option>
+            <mat-option value="optionY">Jahr</mat-option>
+            <mat-option value="optionQ">Quartal</mat-option> 
+            <mat-option value="optionM">Monat</mat-option> 
+        </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill" style="width: 250px;">
+        <mat-select [(value)]="selectedQ" [disabled]="selectedT=='optionY' || selectedT == 'optionM' ">
+            <mat-option>None</mat-option>
+            <mat-option value="optionQ1">Quartal 1</mat-option>
+            <mat-option value="optionQ2">Quartal 2</mat-option> 
+            <mat-option value="optionQ3">Quartal 3</mat-option> 
+            <mat-option value="optionQ4">Quartal 4</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill" style="width: 250px;">
+        <mat-select [(value)]="selectedM" [disabled]="selectedT=='optionQ' || selectedT == 'optionY' ">
+            <mat-option>None</mat-option>
+            <mat-option value="optionJanuar">Januar</mat-option>
+            <mat-option value="optionFebruar">Februar</mat-option> 
+            <mat-option value="optionMärz">März</mat-option> 
+            <mat-option value="optionApril">April</mat-option> 
+            <mat-option value="optionMai">Mai</mat-option> 
+            <mat-option value="optionJuni">Juni</mat-option> 
+            <mat-option value="optionJuli">Juli</mat-option> 
+            <mat-option value="optionAugust">August</mat-option> 
+            <mat-option value="optionSeptember">September</mat-option> 
+            <mat-option value="optionOktober">Oktober</mat-option> 
+            <mat-option value="optionNovember">November</mat-option> 
+            <mat-option value="optionDezember">Dezember</mat-option> 
+        </mat-select>
+    </mat-form-field>
+</div>
+
+
+<div *ngIf="selectedT == 'optionY'">
+
+
+    <div *ngIf="checked && indeterminate">
+        <img src="assets/images/jahr.png" id="line" class="center" style="margin: 0 auto;"/>
+    </div>
+
+    <div *ngIf="checked && !indeterminate">
+        <img src="assets/images/jahrK.png" id="line" class="center" style="margin: 0 auto;"/>
+    </div>
+
+    <div *ngIf="!checked && indeterminate">
+        <img src="assets/images/jahrO.png" id="line" class="center" style="margin: 0 auto;"/>
+    </div>
+</div>
+
+<div *ngIf="selectedT == 'optionQ' && selectedQ=='optionQ1'">
+    <div *ngIf="checked && indeterminate">
+        <img src="assets/images/Quartal/Q1beide.png" id="line" class="center" style="margin: 0 auto;"/>
+    </div>
+
+    <div *ngIf="checked && !indeterminate">
+        <img src="assets/images/Quartal/Q1mit.png" id="line" class="center" style="margin: 0 auto;"/>
+    </div>
+
+    <div *ngIf="!checked && indeterminate">
+        <img src="assets/images/Quartal/Q1ohne.png" id="line" class="center" style="margin: 0 auto;"/>
+    </div>
+</div>
+
+<div *ngIf="selectedT == 'optionM' && selectedM=='optionJanuar'">
+    
+
+    <div *ngIf="checked && !indeterminate">
+        <img src="assets/images/MonatemitKampagne/Januar.png" id="line" class="center" style="margin: 0 auto;"/>
+    </div>
+
+    <div *ngIf="!checked && indeterminate">
+        <img src="assets/images/MonateohneK/Januar.png" id="line" class="center" style="margin: 0 auto;"/>
+    </div>
+</div>

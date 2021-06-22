@@ -1,0 +1,51 @@
+<p id="greating">Einfluss der Produktattribute</p>
+
+<div class="grid-2-columns">
+    
+    
+    <div>
+        
+        <mat-form-field appearance="fill" style="width: 250px;">
+            <mat-select [(value)]="selectedSocks">
+                
+                <mat-option value="optionS">Mit Socken</mat-option>
+                <mat-option value="optionNS">Ohne Socken</mat-option> 
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" style="width: 250px;">
+            <mat-select [(value)]="selectedC">
+                <mat-option value="optionFarbe">Farbe</mat-option>
+                <mat-option value="optionB">Blau</mat-option>
+                <mat-option value="optionS">Schwarz</mat-option> 
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" style="width: 250px;">
+            <mat-select [(value)]="selectedA">
+                <mat-option>-</mat-option>
+                <mat-option value="optionF">Freizeit</mat-option>
+                <mat-option value="optionR">Running</mat-option> 
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" style="width: 250px;">
+            <mat-select [(value)]="selectedM">
+                <mat-option>-</mat-option>
+                <mat-option value="optionL">Leder</mat-option>
+                <mat-option value="optionST">Stoff</mat-option> 
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+
+    <div>
+        <div *ngIf="selectedSocks== 'optionS' && selectedC == 'optionB' && selectedM == 'optionL' && !selectedA">
+            <img src="assets/images/PaulNetzdiagrameBilder/L_B_MS_F.png" id="network" />
+        </div>
+    
+            <div *ngIf="selectedSocks== 'optionS' && selectedC == 'optionB' && selectedM == 'optionL' && selectedA == 'optionR'">
+            <img src="assets/images/PaulNetzdiagrameBilder/L_B_MS_R.png" id="network" />
+            </div>
+        </div>
+  </div>

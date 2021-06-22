@@ -9,10 +9,23 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
+import { AnalysisComponent } from './analysis/analysis.component';
+import { CampagneInfoComponent } from './campagne-info/campagne-info.component';
+import { ProductInfoComponent } from './product-info/product-info.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MainComponent } from './main/main.component';
+import { SalesComponent } from './sales/sales.component';
+import { InfluenceComponent } from './influence/influence.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AnalysisComponent,
+    CampagneInfoComponent,
+    ProductInfoComponent,
+    MainComponent,
+    SalesComponent,
+    InfluenceComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +36,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatSelectModule,
     MatCheckboxModule,
     FormsModule,
-    MatRadioModule
+    MatRadioModule,
+    AppRoutingModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

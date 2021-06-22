@@ -7,7 +7,37 @@ body {
     flex-direction: column;
     min-height: 100%;
 }
-footer {
+#greating {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.grid-3-columns {
+  margin: 5rem auto;
+  width: min(90%, 75rem);
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap:2em
+}
+
+.grid-2-columns {
+  margin: 5rem auto;
+  width: min(90%, 75rem);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap:2em
+}
+
+html {
+    height: 100%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.footer {
     margin-top: auto;
     @apply p-5 text-center text-lg border-t-2 border-black;
     background-color: #363738;
@@ -16,6 +46,8 @@ footer {
     font-weight: 600 !important;
     text-transform: uppercase !important;
 }
+
+
 li {
     float: left;
   }
@@ -31,18 +63,19 @@ li {
   li a:hover {
     background-color: #111111;
   }
-html {
-    height: 100%;
-}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  #de{
+    background-size: contain;
+  }
+  
+  #lang{
+    display: flex;
+    justify-content: center;
+  }
 
-#de{
-  background-size: contain;
-}
-
-#lang{
-  display: flex;
-  justify-content: center;
+  h2, p, span {
+    font-size: 30px;
+    font-family: "AdineuePRO",Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
 }
