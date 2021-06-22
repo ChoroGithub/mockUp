@@ -42,68 +42,8 @@
   <mat-icon>favorite_border</mat-icon>
   <mat-icon>shopping_cart</mat-icon>
 </div>
-<div id="greating">
-  <h2>Hey User!</h2>
-</div>
-<div id="choose">
-  <p>Wähle Diagramtyp aus</p>
-</div>
 
-<mat-card>
-  <mat-tab-group mat-align-tabs="center" class="h-auto">
-    <mat-tab label="Linegraph" class="graph">
-      <div>
-        <div style="display: flex;
-        flex-direction: column; align-items: center;">
-        <mat-radio-group aria-label="Select an option"  class="mt-2">
-          <mat-radio-button value="1" style="margin-right: 16px;">Schuh /Mit Kampagne</mat-radio-button>
-          <mat-radio-button value="2">Schuh /Ohne Kampagne</mat-radio-button>
-        </mat-radio-group>
-      </div>
-      <div style="height: 2px; background-color: #EAEFF5" class="my-2"></div>
-      <img src="assets/images/linegraph.jpeg" id="line" class="center" />
-    </div>
-    </mat-tab>
-    <mat-tab label="Networkgraph">
-      <div class="my-4">
-        <div style="display: flex;
-        flex-direction: column; align-items: center;"> 
-        <mat-radio-group aria-label="Select an option" >
-          <mat-radio-button value="1" style="margin-right: 16px;">Schuh /Mit Kampagne</mat-radio-button>
-          <mat-radio-button value="2">Schuh /Ohne Kampagne</mat-radio-button>
-        </mat-radio-group>
-      </div>
-      <div style="height: 2px; background-color: #EAEFF5" class="my-2"></div>
-        <div style="display: flex; justify-content: center">
-          <div>
-            <img src="assets/images/networkgraph.jpeg" id="network" />
-          </div>
-          <div>
-            <span class="typeList">Wähle Attributen Aus</span>
-            <section class="example-section h-auto">
-              <span class="example-list-section">
-                <mat-checkbox class="example-margin"
-                              [checked]="allComplete"
-                              [indeterminate]="someComplete()"
-                              (change)="setAll($event.checked)">
-                  {{task.name}}
-                </mat-checkbox>
-              </span>
-              
-              <span class="example-list-section">
-                <ul>
-                  <li *ngFor="let subtask of task.subtasks" style="float: none; margin-left: 20px;">
-                    <mat-checkbox [(ngModel)]="subtask.completed"
-                                  (ngModelChange)="updateAllComplete()">
-                      {{subtask.name}}
-                    </mat-checkbox>
-                  </li>
-                </ul>
-              </span>
-            </section>
-          </div>
-        </div>
-      </div>
-    </mat-tab>
-  </mat-tab-group>
-</mat-card>
+<!-- <div id="choose">
+  <p>Wähle Diagramtyp aus</p>
+</div> -->
+<router-outlet></router-outlet>
