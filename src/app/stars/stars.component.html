@@ -1,0 +1,44 @@
+<div id="greating">
+<p class="lowerGreating">Rezensionen</p>
+</div>
+
+<div class="grid-2-columns">
+  <div>
+
+    <mat-form-field appearance="fill" style="width: 250px;">
+      <mat-select [(value)]="selectedGender">
+        <mat-option value="optionGender">Geschlecht</mat-option>
+          <mat-option value="optionM">Mann</mat-option>
+          <mat-option value="optionF">Frau</mat-option> 
+      </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" style="width: 250px;">
+      <mat-select [(value)]="selectedAge">
+          <mat-option value="optionAge">Alter</mat-option>
+          <mat-option value="optionT">Bis 25</mat-option>
+          <mat-option value="optionO">Über 25</mat-option> 
+      </mat-select>
+  </mat-form-field>
+  </div>
+
+  <div>
+
+    <div *ngIf="selectedGender== 'optionM' && selectedAge == 'optionT'">
+      <img src="assets/images/Rezensionen/MT25.png" id="network" />
+    </div>
+
+  <div *ngIf="selectedGender== 'optionM' && selectedAge == 'optionO'">
+      <img src="assets/images/Rezensionen/MO25.png" id="network" />
+  </div>
+
+  <div *ngIf="selectedGender== 'optionF' && selectedAge == 'optionT'">
+    <img src="assets/images/Rezensionen/FT25.png" id="network" />
+  </div>
+
+<div *ngIf="selectedGender== 'optionF' && selectedAge == 'optionO'">
+    <img src="assets/images/Rezensionen/FO25.png" id="network" />
+</div>
+
+  </div>
+</div>
