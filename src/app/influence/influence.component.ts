@@ -14,9 +14,9 @@ export class InfluenceComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectedSocks = 'optionS';
-  selectedC = 'optionFarbe';
-  selectedA = 'optionF';
-  selectedM = 'optionL';
+  selectedSocks = 'optionSocken';
+  selectedColor = 'optionFarbe';
+  selectedSportArt = 'optionSportArt';
+  selectedMaterial = 'optionStoff';
   
 }
