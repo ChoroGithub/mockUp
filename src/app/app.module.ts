@@ -16,6 +16,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
 import { SalesComponent } from './sales/sales.component';
 import { InfluenceComponent } from './influence/influence.component';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { StarsComponent } from './stars/stars.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { InfluenceComponent } from './influence/influence.component';
     ProductInfoComponent,
     MainComponent,
     SalesComponent,
-    InfluenceComponent
+    InfluenceComponent,
+    StarsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import { InfluenceComponent } from './influence/influence.component';
     MatCheckboxModule,
     FormsModule,
     MatRadioModule,
-    AppRoutingModule 
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

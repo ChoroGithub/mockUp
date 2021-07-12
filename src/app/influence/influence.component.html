@@ -1,51 +1,140 @@
-<p id="greating">Einfluss der Produktattribute</p>
+<div id="greating">
+<p class="lowerGreating">Einfluss der Produktattribute</p>
+</div>
 
-<div class="grid-2-columns">
-    
-    
-    <div>
-        
+
+
+
+<div style="display: flex; align-items: center; justify-content: center;">
+
         <mat-form-field appearance="fill" style="width: 250px;">
             <mat-select [(value)]="selectedSocks">
-                
+                <mat-option value="optionSocken">Socken</mat-option>
                 <mat-option value="optionS">Mit Socken</mat-option>
                 <mat-option value="optionNS">Ohne Socken</mat-option> 
             </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="fill" style="width: 250px;">
-            <mat-select [(value)]="selectedC">
+        <mat-form-field appearance="fill" style="width: 250px;" class="ml-2">
+            <mat-select [(value)]="selectedColor">
                 <mat-option value="optionFarbe">Farbe</mat-option>
                 <mat-option value="optionB">Blau</mat-option>
-                <mat-option value="optionS">Schwarz</mat-option> 
+                <mat-option value="optionSW">Schwarz</mat-option> 
             </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="fill" style="width: 250px;">
-            <mat-select [(value)]="selectedA">
-                <mat-option>-</mat-option>
+        <mat-form-field appearance="fill" style="width: 250px;" class="ml-2">
+            <mat-select [(value)]="selectedSportArt">
+                <mat-option value="optionSportArt">Sportart</mat-option>
                 <mat-option value="optionF">Freizeit</mat-option>
                 <mat-option value="optionR">Running</mat-option> 
             </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="fill" style="width: 250px;">
-            <mat-select [(value)]="selectedM">
-                <mat-option>-</mat-option>
+        <mat-form-field appearance="fill" style="width: 250px;" class="ml-2">
+            <mat-select [(value)]="selectedMaterial">
+                <mat-option value="optionStoff">Material</mat-option>
                 <mat-option value="optionL">Leder</mat-option>
                 <mat-option value="optionST">Stoff</mat-option> 
             </mat-select>
         </mat-form-field>
 
+    
+
+    
+</div>
+
+
+
+
+
+
+  <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+    
+
+    
+
+    <div *ngIf="selectedSocks== 'optionS' && selectedColor == 'optionB' && selectedMaterial == 'optionL' && selectedSportArt == 'optionF'">
+        <img src="assets/images/PaulNetzdiagrameBilder/L_B_MS_F.png" id="network" />
+    </div>
+
+    <div *ngIf="selectedSocks== 'optionS' && selectedColor == 'optionB' && selectedMaterial == 'optionST' && selectedSportArt == 'optionF'">
+        <img src="assets/images/PaulNetzdiagrameBilder/S_B_MS_F.png" id="network" />
+    </div>
+
+    <div *ngIf="selectedSocks== 'optionS' && selectedColor == 'optionB' && selectedMaterial == 'optionL' && selectedSportArt == 'optionR'">
+        <img src="assets/images/PaulNetzdiagrameBilder/L_B_MS_R.png" id="network" />
+    </div>
+
+    <div *ngIf="selectedSocks== 'optionS' && selectedColor == 'optionB' && selectedMaterial == 'optionST' && selectedSportArt == 'optionR'">
+        <img src="assets/images/PaulNetzdiagrameBilder/S_B_MS_R.png" id="network" />
+    </div>
+
+
+
+
+
+    <div *ngIf="selectedSocks== 'optionS' && selectedColor == 'optionSW' && selectedMaterial == 'optionL' && selectedSportArt == 'optionF'">
+        <img src="assets/images/PaulNetzdiagrameBilder/L_S_MS_F.png" id="network" />
+    </div>
+
+    <div *ngIf="selectedSocks== 'optionS' && selectedColor == 'optionSW' && selectedMaterial == 'optionST' && selectedSportArt == 'optionF'">
+        <img src="assets/images/PaulNetzdiagrameBilder/S_S_MS_F.png" id="network" />
+    </div>
+
+    <div *ngIf="selectedSocks== 'optionS' && selectedColor == 'optionSW' && selectedMaterial == 'optionL' && selectedSportArt == 'optionR'">
+        <img src="assets/images/PaulNetzdiagrameBilder/L_S_MS_R.png" id="network" />
+    </div>
+
+    <div *ngIf="selectedSocks== 'optionS' && selectedColor == 'optionSW' && selectedMaterial == 'optionST' && selectedSportArt == 'optionR'">
+        <img src="assets/images/PaulNetzdiagrameBilder/S_S_MS_R.png" id="network" />
+    </div>
+
+
+
+
+
+    <div *ngIf="selectedSocks== 'optionNS' && selectedColor == 'optionB' && selectedMaterial == 'optionL' && selectedSportArt == 'optionF'">
+        <img src="assets/images/PaulNetzdiagrameBilder/L_B_OS_F.png" id="network" />
+    </div>
+
+    <div *ngIf="selectedSocks== 'optionNS' && selectedColor == 'optionB' && selectedMaterial == 'optionST' && selectedSportArt == 'optionF'">
+        <img src="assets/images/PaulNetzdiagrameBilder/S_B_OS_F.png" id="network" />
+    </div>
+
+    <div *ngIf="selectedSocks== 'optionNS' && selectedColor == 'optionB' && selectedMaterial == 'optionL' && selectedSportArt == 'optionR'">
+        <img src="assets/images/PaulNetzdiagrameBilder/L_B_OS_R.png" id="network" />
+    </div>
+
+    <div *ngIf="selectedSocks== 'optionNS' && selectedColor == 'optionB' && selectedMaterial == 'optionST' && selectedSportArt == 'optionR'">
+        <img src="assets/images/PaulNetzdiagrameBilder/S_B_OS_R.png" id="network" />
+    </div>
+
+
+
+
+    <div *ngIf="selectedSocks== 'optionNS' && selectedColor == 'optionSW' && selectedMaterial == 'optionL' && selectedSportArt == 'optionF'">
+        <img src="assets/images/PaulNetzdiagrameBilder/L_S_OS_F.png" id="network" />
+    </div>
+
+    <div *ngIf="selectedSocks== 'optionNS' && selectedColor == 'optionSW' && selectedMaterial == 'optionST' && selectedSportArt == 'optionF'">
+        <img src="assets/images/PaulNetzdiagrameBilder/S_S_OS_F.png" id="network" />
+    </div>
+
+    <div *ngIf="selectedSocks== 'optionNS' && selectedColor == 'optionSW' && selectedMaterial == 'optionL' && selectedSportArt == 'optionR'">
+        <img src="assets/images/PaulNetzdiagrameBilder/L_S_OS_R.png" id="network" />
+    </div>
+
+    <div *ngIf="selectedSocks== 'optionNS' && selectedColor == 'optionSW' && selectedMaterial == 'optionST' && selectedSportArt == 'optionR'">
+        <img src="assets/images/PaulNetzdiagrameBilder/S_S_OS_R.png" id="network" />
     </div>
 
     <div>
-        <div *ngIf="selectedSocks== 'optionS' && selectedC == 'optionB' && selectedM == 'optionL' && !selectedA">
-            <img src="assets/images/PaulNetzdiagrameBilder/L_B_MS_F.png" id="network" />
-        </div>
+    <p class="steckBrief">
+        Das Analyse-Tool gibt darüber Auskunft, welche Eigenschaften den Schuhabsatz beeinflussen. 
+        Ein Wert von 5 deutet daraufhin, dass dieses Merkmal den Absatz stark positiv beeinflusst. 
+        Ein Wert von 1 deutet hingegen darauf hin, dass dieses Merkmal den Absatz nicht sonderlich beeinflusst.
+    </p>
+</div>
     
-            <div *ngIf="selectedSocks== 'optionS' && selectedC == 'optionB' && selectedM == 'optionL' && selectedA == 'optionR'">
-            <img src="assets/images/PaulNetzdiagrameBilder/L_B_MS_R.png" id="network" />
-            </div>
-        </div>
-  </div>
+</div>

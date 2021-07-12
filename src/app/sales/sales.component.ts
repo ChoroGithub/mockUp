@@ -14,7 +14,7 @@ export class SalesComponent implements OnInit {
   checked = false;
   indeterminate = false;
 
-  selectedT = 'optionY';
+  selectedT = 'optionPeriode';
   selectedQ = 'optionQ1';
   selectedM = 'optionJanuar';
 }

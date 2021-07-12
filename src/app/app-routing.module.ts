@@ -7,6 +7,7 @@ import { InfluenceComponent } from './influence/influence.component';
 import { MainComponent } from './main/main.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { SalesComponent } from './sales/sales.component';
+import { StarsComponent } from './stars/stars.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'product', component: ProductInfoComponent },
   { path: 'sales', component: SalesComponent },
   { path: 'influence', component: InfluenceComponent },
+  { path: 'stars', component: StarsComponent },
 ];
 
 @NgModule({
