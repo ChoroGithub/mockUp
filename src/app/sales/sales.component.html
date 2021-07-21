@@ -3,8 +3,8 @@
 </div>
 
 <div class="grid-2-columns">
-    <mat-checkbox class="example-margin" [(ngModel)]="checked" style="margin: 0 auto;">Mit Kampagne</mat-checkbox>
-    <mat-checkbox class="example-margin" [(ngModel)]="indeterminate" style="margin: 0 auto;">Ohne Kampagne</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="checkedWithCampagne" style="margin: 0 auto;">Mit Kampagne</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="checkedWithoutCampagne" style="margin: 0 auto;">Ohne Kampagne</mat-checkbox>
 </div>
 <div style="display: flex; align-items: center; justify-content: center;">
     <mat-form-field appearance="fill" style="width: 250px;">
@@ -50,86 +50,86 @@
 <div *ngIf="selectedT == 'optionY'">
 
 
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/jahr.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/jahrK.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/jahrO.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionQ' && selectedQ=='optionQ1'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/Quartal/Q1beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/Quartal/Q1mit.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/Quartal/Q1ohne.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionQ' && selectedQ=='optionQ2'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/Quartal/Q2beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/Quartal/Q2mit.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/Quartal/Q2ohne.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionQ' && selectedQ=='optionQ3'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/Quartal/Q3beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/Quartal/Q3mit.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/Quartal/Q3ohne.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionQ' && selectedQ=='optionQ4'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/Quartal/Q4beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/Quartal/Q4mit.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/Quartal/Q4ohne.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 
 <div *ngIf="selectedT == 'optionM' && selectedM=='optionJanuar'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Januar/beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Januar/mitK.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Januar/ohneK.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
@@ -138,155 +138,155 @@
 
 
 <div *ngIf="selectedT == 'optionM' && selectedM=='optionFebruar'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Februar/beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Februar/mit K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Februar/ohne K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionM' && selectedM=='optionMaerz'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Maerz/beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Maerz/mit K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Maerz/ohne K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionM' && selectedM=='optionApril'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/April/beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/April/mit K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/April/ohne K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionM' && selectedM=='optionMai'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Mai/beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Mai/mit K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Mai/ohne K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionM' && selectedM=='optionJuni'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Juni/beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Juni/mit K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Juni/ohne K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionM' && selectedM=='optionJuli'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Juli/beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Juli/mit K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Juli/ohne K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionM' && selectedM=='optionAugust'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/August/beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/August/mit K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/August/ohne K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionM' && selectedM=='optionSeptember'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/September/beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/September/mit K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/September/ohne K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionM' && selectedM=='optionOktober'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Oktober/beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Oktober/mit K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Oktober/ohne K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionM' && selectedM=='optionNovember'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/November/beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/November/mit K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/November/ohne K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>
 
 <div *ngIf="selectedT == 'optionM' && selectedM=='optionDezember'">
-    <div *ngIf="checked && indeterminate">
+    <div *ngIf="checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Dezember/beide.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="checked && !indeterminate">
+    <div *ngIf="checkedWithCampagne && !checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Dezember/mit K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 
-    <div *ngIf="!checked && indeterminate">
+    <div *ngIf="!checkedWithCampagne && checkedWithoutCampagne">
         <img src="assets/images/einzelneMonate/Dezember/ohne K.png" id="line" class="center" style="margin: 0 auto;"/>
     </div>
 </div>

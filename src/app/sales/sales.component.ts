@@ -11,8 +11,8 @@ export class SalesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  checked = false;
-  indeterminate = false;
+  checkedWithCampagne = false;
+  checkedWithoutCampagne = false;
 
   selectedT = 'optionPeriode';
   selectedQ = 'optionQ1';
